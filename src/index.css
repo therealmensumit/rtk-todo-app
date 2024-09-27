@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box
+}
+
+.rotate {
+  animation: .75s linear infinite spinner-border;
+}
+
+.ribbon {
+  /* the ribbon size */
+  --s: 1.8em;
+  /* the depth */
+  --d: .8em;
+  /* the cutout part */
+  --c: .8em;
+
+  padding: 0 calc(var(--s) + .5em) var(--d);
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+  line-height: 1.8;
+  background:
+    conic-gradient(at left var(--s) bottom var(--d),
+      #0000 25%, #0008 0 37.5%, #0004 0) 0 /50% 100% no-repeat,
+    conic-gradient(at right var(--s) bottom var(--d),
+      #0004 62.5%, #0008 0 75%, #0000 0) 100%/50% 100% no-repeat;
+  clip-path: polygon(0 var(--d), var(--s) var(--d), var(--s) 0, calc(100% - var(--s)) 0, calc(100% - var(--s)) var(--d), 100% var(--d), calc(100% - var(--c)) calc(50% + var(--d)/2), 100% 100%, calc(100% - var(--s) - var(--d)) 100%, calc(100% - var(--s) - var(--d)) calc(100% - var(--d)), calc(var(--s) + var(--d)) calc(100% - var(--d)), calc(var(--s) + var(--d)) 100%, 0 100%, var(--c) calc(50% + var(--d)/2));
+  background-color: #CC333F;
+  /* the main color */
+  width: fit-content;
+  display: inline-block;
+}
